@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- ============================================================= -->
+<!-- EDIT ME: brand name "Front Door" appears in title, nav, footer -->
+<!-- Find-and-replace "Front Door" to rebrand.                      -->
+<!-- ============================================================= -->
+<title>Front Door | Get your outreach done in 24 hours</title>
+<meta name="description" content="We'll research 50 companies that are a perfect fit for your product or service and reach out to them on your behalf within 24 hours, all for just £25." />
+<meta property="og:title" content="Front Door | Get your outreach done in 24 hours" />
+<meta property="og:description" content="We'll research 50 companies that are a perfect fit for your product or service and reach out to them on your behalf within 24 hours, all for just £25." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --ink:#0E0E0E;
+    --mut:#6E6E6E;
+    --line:#E6E4DF;
+    --hd-a:255px 14px 225px 15px/15px 225px 12px 255px;
+    --hd-b:15px 225px 15px 255px/225px 15px 255px 15px;
+    --hd-c:18px 220px 22px 250px/230px 16px 250px 18px;
+    --squiggle:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2012'%20preserveAspectRatio='none'%3E%3Cpath%20d='M2,8%20C40,2%2062,10%20100,6%20C140,2%20166,10%20198,5'%20fill='none'%20stroke='%230E0E0E'%20stroke-width='2.6'%20stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Ubuntu",system-ui,sans-serif;
+    font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Ubuntu",system-ui,sans-serif;font-weight:500;margin:0;line-height:1.08;letter-spacing:-.01em;}
+  p{margin:0;}
+  a{color:inherit;}
+  section[id]{scroll-margin-top:86px;}
+
+  .wrap{max-width:1000px;margin:0 auto;padding:0 28px;}
+  .label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600;}
+
+  .ul{background:var(--squiggle) no-repeat 0 100%;background-size:100% .42em;padding-bottom:.1em;}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:"Ubuntu",sans-serif;font-weight:500;font-size:16px;
+    padding:14px 28px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);
+    border-radius:var(--hd-a);cursor:pointer;text-decoration:none;
+    box-shadow:3px 3px 0 var(--ink);
+    transition:background .18s ease,color .18s ease,border-radius .2s ease,transform .12s ease,box-shadow .15s ease;
+  }
+  .btn:hover{border-radius:var(--hd-b);transform:translateY(-1px);box-shadow:4px 5px 0 var(--ink);}
+  .btn:active{transform:translateY(2px);box-shadow:1px 1px 0 var(--ink);}
+  .btn:focus-visible{outline:3px solid var(--ink);outline-offset:4px;}
+  .btn-line{background:transparent;color:var(--ink);}
+  .btn-line:hover{background:var(--ink);color:var(--paper);}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+  .brand{font-family:"Ubuntu",sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;text-decoration:none;
+    background:var(--squiggle) no-repeat 0 100%;background-size:100% .34em;padding-bottom:5px;}
+  .nav-links{display:flex;align-items:center;gap:30px;}
+  .nav-links a{text-decoration:none;font-size:15px;color:var(--mut);}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a:focus-visible{outline:2px solid var(--ink);outline-offset:4px;}
+  @media(max-width:760px){.nav-links{display:none;}}
+
+  /* HERO (centred) */
+  .hero{padding:92px 0 84px;text-align:center;}
+  .hero h1{font-size:clamp(40px,6.2vw,66px);font-weight:500;max-width:18ch;margin:0 auto;}
+  .hero h1 em{font-style:normal;font-weight:500;}
+  .hero .lede{font-size:20px;color:var(--mut);margin:26px auto 34px;max-width:58ch;}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+  .hero .btn{font-size:18px;padding:16px 32px;}
+  .hero-note{margin-top:20px;font-size:14px;color:var(--mut);}
+
+  .sec{padding:84px 0;border-top:1px solid var(--line);}
+  .sec-head{text-align:center;max-width:38ch;margin:0 auto 56px;}
+  .sec-head .label{margin-bottom:16px;display:block;}
+  .sec-head h2{font-size:clamp(30px,4.4vw,44px);font-weight:500;}
+  .sec-head h2 em{font-style:normal;font-weight:500;}
+
+  /* STEPS */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;}
+  @media(max-width:820px){.steps{grid-template-columns:1fr;gap:40px;}}
+  .step{text-align:center;}
+  .step .n{
+    width:58px;height:58px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;
+    font-family:"Ubuntu",sans-serif;font-size:24px;font-weight:500;
+    border:2px solid var(--ink);border-radius:var(--hd-a);box-shadow:3px 3px 0 var(--ink);
+  }
+  .step:nth-child(2) .n{border-radius:var(--hd-b);}
+  .step:nth-child(3) .n{border-radius:var(--hd-c);}
+  .step h3{font-size:20px;font-weight:600;margin:0 0 12px;}
+  .step p{color:var(--mut);font-size:16px;}
+
+  /* PRICING */
+  .launch{display:block;text-align:center;margin:-32px auto 40px;}
+  .launch span{
+    display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    border:2px solid var(--ink);border-radius:var(--hd-b);padding:8px 18px;box-shadow:3px 3px 0 var(--ink);background:var(--paper);
+  }
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+  @media(max-width:820px){.tiers{grid-template-columns:1fr;}}
+  .tier{padding:32px 26px;border:2px solid var(--ink);border-radius:var(--hd-a);background:var(--paper);display:flex;flex-direction:column;text-align:center;}
+  .tier:nth-child(2){border-radius:var(--hd-b);}
+  .tier:nth-child(3){border-radius:var(--hd-c);}
+  .tier.feat{box-shadow:6px 6px 0 var(--ink);}
+  .tier .feat-lab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:700;margin-bottom:14px;height:14px;}
+  .tier .count{font-family:"Ubuntu",sans-serif;font-size:26px;font-weight:600;}
+  .tier .price{margin:18px 0 26px;display:flex;align-items:baseline;gap:12px;justify-content:center;}
+  .tier .price .now{font-family:"Ubuntu",sans-serif;font-size:44px;font-weight:500;}
+  .tier .price .was{font-size:20px;color:var(--mut);text-decoration:line-through;}
+  .tier .btn{margin-top:auto;width:100%;}
+  .tier.feat .btn{background:var(--ink);color:var(--paper);}
+  .tier:not(.feat) .btn{background:transparent;color:var(--ink);}
+  .tier:not(.feat) .btn:hover{background:var(--ink);color:var(--paper);}
+
+  /* REVIEWS */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:820px){.quotes{grid-template-columns:1fr;}}
+  .quote{padding:28px;border:2px solid var(--ink);border-radius:var(--hd-a);background:var(--paper);display:flex;flex-direction:column;}
+  .quote:nth-child(2){border-radius:var(--hd-b);box-shadow:5px 5px 0 var(--ink);}
+  .quote:nth-child(3){border-radius:var(--hd-c);}
+  .quote p{font-size:17px;line-height:1.5;}
+  .quote .who{margin-top:18px;font-size:14px;color:var(--mut);font-weight:600;}
+
+  footer{padding:46px 0;border-top:1px solid var(--ink);color:var(--mut);font-size:14px;}
+  .foot-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;}
+
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;}
+    html{scroll-behavior:auto;}
+    .btn{transition:background .18s ease,color .18s ease;}
+    .btn:hover,.btn:active{transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">Front Door</a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Get your outreach done in <em class="ul">24 hours</em></h1>
+      <p class="lede">We'll research 50 companies that are a perfect fit for your product or service and reach out to them on your behalf within 24 hours - all for just £25</p>
+      <div class="hero-cta">
+        <!-- EDIT ME: paste your Stripe link for the 50-companies / £25 package -->
+        <a href="#" class="btn">Contact 50 companies for me</a>
+      </div>
+      <p class="hero-note">50% off for launch.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">How it works</span>
+        <h2>Here's how it works</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="n">1</div>
+          <h3>Tell us about your product &amp; message</h3>
+          <p>Describe what you're selling, your ideal customers, and the message you want to send. Unsure what to send? No worries - we can help you craft the perfect outreach message.</p>
+        </div>
+        <div class="step reveal">
+          <div class="n">2</div>
+          <h3>We research &amp; reach out by hand</h3>
+          <p>We manually find companies that are a perfect fit for your product and contact them via their contact pages. You'll save hours of time/stress manually doing this yourself.</p>
+        </div>
+        <div class="step reveal">
+          <div class="n">3</div>
+          <h3>Get your report in 24 hours</h3>
+          <p>Receive a full report of all the companies we've researched and contacted on your behalf in just 24-hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="sec" id="pricing">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Pricing</span>
+        <h2>Choose your package</h2>
+      </div>
+      <div class="launch reveal"><span>50% off for launch</span></div>
+      <div class="tiers reveal">
+
+        <div class="tier feat">
+          <div class="feat-lab">Best value</div>
+          <div class="count">50 companies</div>
+          <div class="price"><span class="now">£25</span><span class="was">£50</span></div>
+          <!-- EDIT ME: paste your Stripe link for the 50-companies / £25 package -->
+          <a href="#" class="btn">Contact 50 companies for me</a>
+        </div>
+
+        <div class="tier">
+          <div class="feat-lab"></div>
+          <div class="count">100 companies</div>
+          <div class="price"><span class="now">£50</span><span class="was">£100</span></div>
+          <!-- EDIT ME: paste your Stripe link for the 100-companies / £50 package -->
+          <a href="#" class="btn">Contact 100 companies for me</a>
+        </div>
+
+        <div class="tier">
+          <div class="feat-lab"></div>
+          <div class="count">200 companies</div>
+          <div class="price"><span class="now">£100</span><span class="was">£200</span></div>
+          <!-- EDIT ME: paste your Stripe link for the 200-companies / £100 package -->
+          <a href="#" class="btn">Contact 200 companies for me</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec" id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Reviews</span>
+      </div>
+      <div class="quotes">
+        <div class="quote reveal">
+          <p>"Front Door saved me hours of research and outreach. Got 3 replies within a week!"</p>
+          <div class="who">Sarah M., Founder</div>
+        </div>
+        <div class="quote reveal">
+          <p>"I was skeptical at first, but the quality of leads was impressive. Closed my first deal within 2 weeks."</p>
+          <div class="who">James K., Consultant</div>
+        </div>
+        <div class="quote reveal">
+          <p>"Finally, a simple way to get my product in front of the right people. Worth every penny."</p>
+          <div class="who">Michelle T., Startup CEO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>&copy; <span id="yr"></span> Front Door</span>
+    <span>We get you through the front door.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
